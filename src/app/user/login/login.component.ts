@@ -43,17 +43,29 @@ export class LoginComponent implements OnInit {
         }
       )
     }
+    else {
+      this.alertInvalidData();
+    }
   }
   private constructForm() {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
+      password: new FormControl('', [Validators.required,  Validators.minLength(3)])
     })
   }
   alertInvalid() {
     Swal.fire({
       title: 'Error!',
       text: 'contraseña o usuario incorrectos',
+      icon: 'error',
+      confirmButtonText: 'Continue'
+    })
+
+  }
+  alertInvalidData() {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Datos de ingreso incompletos',
       icon: 'error',
       confirmButtonText: 'Continue'
     })
