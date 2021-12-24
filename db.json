@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "c.sepulveda@utp.edu.co",
+      "username": "CamiloSepulveda",
+      "password": "12345"
+    },
+    {
+      "lastname": "sepulveda",
+      "email": "sepulveda@utp.edu.co",
+      "password": "12345",
+      "city": "Cartago",
+      "name": "camilo",
+      "id": 2
+    },
+    {
+      "lastname": "sepulveda",
+      "email": "sepulveda@utp.edu.co",
+      "password": "12345",
+      "city": "cartago",
+      "name": "camilo",
+      "id": 3
+    },
+    {
+      "lastname": "Sepulveda",
+      "email": "sepulveda@utp.edu.co",
+      "password": "12345",
+      "city": "Cartago",
+      "name": "Olmac",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "",
+      "description": ""
+    }
+  ]
+}

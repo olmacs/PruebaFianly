@@ -1,0 +1,138 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+<div class="cont">
+    <section class="main">
+        <div class="container py-5">
+            
+        </div>
+    </section>
+
+    <br> <br>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-lg-8 m-auto text-center">
+                <h5>Variedades</h5>
+            </div>
+
+
+            <!-- ########################################################-->
+
+            <section class="new">
+                <div class="container py-5">
+                    <div class="row text-center" *ngFor="let item of products; let i = index">
+                        <div class="col-lg-3" *ngFor="let card of item; let cardIndex = index">
+
+                            <mdb-card class="my-1 p-3">
+                                <mdb-card-img [src]="card.imgUrl" alt="Card image cap"></mdb-card-img>
+                                <mdb-card-body>
+                                    <mdb-card-title>
+                                        <h4>{{card.name}}</h4>
+                                    </mdb-card-title>
+                                    <p>{{card.price}}$</p>
+                                    <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>añadir al carro</a>
+                                </mdb-card-body>
+                            </mdb-card>
+
+                        </div>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </section>
+            <div class="border-top mb-50"></div>
+            <br><br>
+
+
+        </div>
+        <div class="col-md-2">
+            <h5>Filtros</h5>
+            <div class="site">
+                <div class="wrapper">
+                    <div class="sidebar filters">
+                        <div class="block">
+                            <h3 class="title">TYPE</h3>
+                            <ul>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a
+                                        class="checked">Lorem del Ces</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Ispum ce Peupil</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Lorem del Ces</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Ispum ce Peupil</a></li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <h3 class="title">Color</h3>
+                            <ul>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Blue</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a class="checked">Charcoal</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Green</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Red</a></li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <h3 class="title">Size</h3>
+                            <ul>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Petite</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a class="checked">Medium</a></li>
+                                <li><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" /><a>Large</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-8 m-auto text-center">
+            <h5>Tendencia</h5>
+        </div>
+        <app-carousel></app-carousel>
+
+        <section class="about">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-lg-8 m-auto text-center">
+                        <h1>Encuentra la solución a tu problema</h1>
+                        <h6 style="color: red;">Servicios de alta calidad a tu mano</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="../../../assets/img/RELOJ.jpg" class="img-fluid mb-3" alt="">
+                        <h5>Cuando lo necesites</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias pariatur quaerat debitis
+                            mollitia, commodi voluptates magni esse consectetur fuga dolore.
+                            Consequuntur eaque aut debitis voluptatibus qui magnam recusandae repudiandae earum!</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="../../../assets/img/Nuevo-Currículo.jpg" class="img-fluid mb-3" alt="">
+                        <h5>Donde lo necesites</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias pariatur quaerat debitis
+                            mollitia, commodi voluptates magni esse consectetur fuga dolore.
+                            Consequuntur eaque aut debitis voluptatibus qui magnam recusandae repudiandae earum!</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="../../../assets/img/buyer-persona-main.jpg" class="img-fluid mb-3" alt="">
+                        <h5>Como lo necesites</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias pariatur quaerat debitis
+                            mollitia, commodi voluptates magni esse consectetur fuga dolore.
+                            Consequuntur eaque aut debitis voluptatibus qui magnam recusandae repudiandae earum!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="apple py-5">
+            <div class="container text-white py-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="font-weight-bold py-3">Estas interesado en saber quiénes somos?</h1>
+                        <h6>Servicios de alta calidad a tu mano</h6>
+                        <a class="btn btn-outline-success mt-3" href="/landing">Conoce mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

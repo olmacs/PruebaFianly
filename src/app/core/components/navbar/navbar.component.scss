@@ -1,0 +1,79 @@
+
+.btn_black {
+    color: black !important;
+    box-shadow:none !important;
+    padding:0 !important;
+    word-wrap: none !important;
+
+
+}
+
+::ng-deep .navCss nav
+   {
+        background-color: white;
+        z-index: 100;
+   }
+.navbar-toggler{
+
+    background-color: rgba(68, 68, 68, 0.363) !important;
+}
+
+.navbar-brand, .nav-link  {
+    color: black !important;
+}
+
+img{
+    width: 40px;
+}
+
+
+.black_color{
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+
+}
+
+
+.search{
+    height: 40px;
+    width: 100%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    font-family: 'Rubik', sans-serif;
+    border: 2px solid rgb(248, 26, 92);
+}
+
+.btn_pro{
+    height: 40px;
+    width: 20%;
+    outline: none;
+    border: none;
+    color: black;
+    border-radius: 60px;
+    font-weight: 700;
+    margin: 0 !important; 
+}
+
+
+.log{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    margin-left: 1%;
+    margin: 0 !important; 
+
+}
+.navbar-light .navbar-brand {
+    color: black;
+}
+.icon{
+    width: 22px;
+}
+
+
+
+
