@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   sesionActiva: any;
-
+  nameUser: any;
   constructor(protected router: Router) { }
   readLocalStorageValue(key: any) {
     return localStorage.getItem(key) != null;
   }
   ngOnInit(): void {
     this.sesionActiva = this.readLocalStorageValue('name');
+    this.nameUser = localStorage.getItem('name');
   }
   async goLogin(){
     await this.router.navigate(['/user/login']);

@@ -29,15 +29,24 @@
             <a>LOGIN</a>
           </button>
         </ng-template>
-
-
-
+        
+        
+        
         <ng-template *ngIf="sesionActiva == true;then logOutButton"></ng-template>
-
+        
         <ng-template #logOutButton>
-          <button (click)="logOut()" class="btn">
-            <a class="a">LOGOUT</a>
-          </button>
+          <div class="row">
+            <div class="col">
+              <button (click)="logOut()" class="btn">
+                <a class="a">LOGOUT</a>
+              </button>
+            </div>
+            
+              <div class="col p-1">
+                <h2>{{nameUser}}</h2>
+              </div>
+          </div>
+          
         </ng-template>
 
 

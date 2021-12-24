@@ -13,4 +13,7 @@ export class RegisterService {
   public register(register: Register): Observable<Register>{
     return this.http.doPost<Register,any>(environment.endpoint + '/users', register, this.http.optsName('register'))
   }
+  public getCities(): Observable<any>{
+    return this.http.doGet<any>(environment.endpoint + '/ciudades', this.http.optsName('getCities'))
+  }
 }

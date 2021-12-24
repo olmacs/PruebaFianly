@@ -14,10 +14,12 @@ export class RegisterComponent implements OnInit {
   
   registerForm: any;
   error: any;
+  ciudades: any;
   constructor(protected registerService: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
     this.constructForm();
+    this.getCities();
   }
   runRegister(){
     if(this.registerForm.valid){
@@ -44,6 +46,13 @@ export class RegisterComponent implements OnInit {
       city: new FormControl ('', [Validators.required, Validators.minLength(3)]),
       name: new FormControl ('', [Validators.required, Validators.minLength(3)])
 
+    })
+  }
+  getCities(){
+    this.registerService.getCities().subscribe( (value: any) =>{
+      this.ciudades = value;
+      console.log(value);
+      
     })
   }
   alertInvalid() {
