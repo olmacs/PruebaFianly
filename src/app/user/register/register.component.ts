@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 
 export class RegisterComponent implements OnInit {
-  
+
   registerForm: any;
   error: any;
   ciudades: any;
@@ -21,12 +21,11 @@ export class RegisterComponent implements OnInit {
     this.constructForm();
     this.getCities();
   }
-  runRegister(){
-    if(this.registerForm.valid){
-      
+  runRegister() {
+    if (this.registerForm.valid) {
+
       this.registerService.register(this.registerForm.value).subscribe(
         value => {
-          console.log(value);
           this.router.navigate(['/user/login'])
         }, error => {
           this.alertInvalid();
@@ -34,25 +33,23 @@ export class RegisterComponent implements OnInit {
         }
       )
     }
-    else{
+    else {
       this.alertInvalidData();
     }
   }
-  private constructForm(){
+  private constructForm() {
     this.registerForm = new FormGroup({
-      lastname: new FormControl ('', [Validators.required, Validators.minLength(3)]),
-      email: new FormControl ('', [Validators.required, Validators.minLength(3), Validators.email]),
-      password: new FormControl ('', [Validators.required, Validators.minLength(3)]),
-      city: new FormControl ('', [Validators.required, Validators.minLength(3)]),
-      name: new FormControl ('', [Validators.required, Validators.minLength(3)])
+      lastname: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      email: new FormControl('', [Validators.required, Validators.minLength(3), Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      city: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      name: new FormControl('', [Validators.required, Validators.minLength(3)])
 
     })
   }
-  getCities(){
-    this.registerService.getCities().subscribe( (value: any) =>{
+  getCities() {
+    this.registerService.getCities().subscribe((value: any) => {
       this.ciudades = value;
-      console.log(value);
-      
     })
   }
   alertInvalid() {

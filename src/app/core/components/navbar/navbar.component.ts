@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
     this.sesionActiva = this.readLocalStorageValue('name');
     this.nameUser = localStorage.getItem('name');
   }
-  async goLogin(){
+  async goLogin() {
     await this.router.navigate(['/user/login']);
     window.location.reload();
   }
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     window.location.reload();
   }
 
-  async goHome(){
+  async goHome() {
     await this.router.navigate(['']);
     window.location.reload();
   }

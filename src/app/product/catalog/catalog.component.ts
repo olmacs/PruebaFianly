@@ -37,7 +37,6 @@ export class CatalogComponent implements OnInit {
     }
     this.catalogService.filerProducts(this.type, this.color, this.size).subscribe(
       value =>{
-        console.log(value);
         this.cards = value;
         this.products = this.chunk(this.cards, 4);
       },
@@ -49,7 +48,6 @@ export class CatalogComponent implements OnInit {
   ngOnInit(): void {
     this.catalogService.filerProducts(this.type, this.color, this.size).subscribe(
       value =>{
-        console.log(value);
         this.cards = value;
         this.products = this.chunk(this.cards, 4);
         
@@ -58,8 +56,6 @@ export class CatalogComponent implements OnInit {
         console.log(error);
         
       } )
-    console.log(this.cards);
-
   }
 
 }

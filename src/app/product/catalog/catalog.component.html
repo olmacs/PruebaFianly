@@ -10,7 +10,7 @@
     <br> <br>
 
     <div class="container">
-        
+
     </div>
     <div class="row">
         <div class="col-md-10">
@@ -23,87 +23,99 @@
             <!-- ########################################################-->
 
             <section class="new">
-                
-                    <div class="row text-center" *ngFor="let item of products; let i = index">
-                        <div class="col-lg-3" *ngFor="let card of item; let cardIndex = index">
 
-                            <mdb-card class="my-1 p-3">
-                                <mdb-card-img [src]="card.imgUrl" alt="Card image cap"></mdb-card-img>
-                                <mdb-card-body>
-                                    <mdb-card-title>
-                                        <h4>{{card.name}}</h4>
-                                    </mdb-card-title>
-                                    <p>{{card.price}}$</p>
-                                    <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>añadir al carro</a>
-                                </mdb-card-body>
-                            </mdb-card>
+                <div class="row text-center" *ngFor="let item of products; let i = index">
+                    <div class="col-lg-3" *ngFor="let card of item; let cardIndex = index">
 
-                        </div>
-                        <br><br><br><br>
+                        <mdb-card class="my-1 p-3">
+                            <mdb-card-img [src]="card.imgUrl" alt="Card image cap"></mdb-card-img>
+                            <mdb-card-body>
+                                <mdb-card-title>
+                                    <h4>{{card.name}}</h4>
+                                </mdb-card-title>
+                                <p>{{card.price}}$</p>
+                                <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>añadir al
+                                    carro</a>
+                            </mdb-card-body>
+                        </mdb-card>
+
                     </div>
-                
+                    <br><br><br><br>
+                </div>
+
             </section>
             <div class="border-top mb-50"></div>
             <br><br>
 
 
         </div>
-        
+
         <div class="col-md-2">
             <div class="container">
                 <h4>Filtros</h4>
-            <br>
-            <div class="site">
-                <div class="wrapper">
-                    <div class="sidebar filters">
-                        <div class="card">
-                            <h5 class="form-check">Type</h5>
-                            <ul>
-                                <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault" class="form-check-input" type="radio" value="shirt" id="flexCheckDefault" /><a>Shirt</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault" class="form-check-input" type="radio" value="shoes" id="flexCheckDefault" /><a>Shoes</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault" class="form-check-input" type="radio" value="accessories" id="flexCheckDefault" /><a>Accessories</a></li>
-                            </ul>
-                        </div>
-                        <br>
-                        <div class="card">
-                            <h5 class="form-check">Color</h5>
-                            <ul>
-                                <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1" class="form-check-input" type="radio" value="black" id="flexCheckDefault" /><a class="checked">Black</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1" class="form-check-input" type="radio" value="brown" id="flexCheckDefault" /><a>Brown</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1" class="form-check-input" type="radio" value="red" id="flexCheckDefault" /><a>Red</a></li>
-                            </ul>
-                        </div>
-                        <br>
-                        <div class="card">
-                            <h5 class="form-check">Size</h5>
-                            <ul>
-                                <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2" class="form-check-input" type="radio" value="petite" id="flexCheckDefault" /><a>Petite</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2" class="form-check-input" type="radio" value="medium" id="flexCheckDefault" /><a class="checked">Medium</a></li>
-                                <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2" class="form-check-input" type="radio" value="large" id="flexCheckDefault" /><a>Large</a></li>
-                            </ul>
+                <br>
+                <div class="site">
+                    <div class="wrapper">
+                        <div class="sidebar filters">
+                            <div class="card">
+                                <h5 class="form-check">Type</h5>
+                                <ul>
+                                    <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault"
+                                            class="form-check-input" type="radio" value="shirt"
+                                            id="flexCheckDefault" /><a>Shirt</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault"
+                                            class="form-check-input" type="radio" value="shoes"
+                                            id="flexCheckDefault" /><a>Shoes</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '0')" name="flexRadioDefault"
+                                            class="form-check-input" type="radio" value="accessories"
+                                            id="flexCheckDefault" /><a>Accessories</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="card">
+                                <h5 class="form-check">Color</h5>
+                                <ul>
+                                    <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1"
+                                            class="form-check-input" type="radio" value="black"
+                                            id="flexCheckDefault" /><a class="checked">Black</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1"
+                                            class="form-check-input" type="radio" value="brown"
+                                            id="flexCheckDefault" /><a>Brown</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '1')" name="flexRadioDefault1"
+                                            class="form-check-input" type="radio" value="red"
+                                            id="flexCheckDefault" /><a>Red</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="card">
+                                <h5 class="form-check">Size</h5>
+                                <ul>
+                                    <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2"
+                                            class="form-check-input" type="radio" value="petite"
+                                            id="flexCheckDefault" /><a>Petite</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2"
+                                            class="form-check-input" type="radio" value="medium"
+                                            id="flexCheckDefault" /><a class="checked">Medium</a></li>
+                                    <li><input mdbRadio (click)="filterProducts($event, '2')" name="flexRadioDefault2"
+                                            class="form-check-input" type="radio" value="large"
+                                            id="flexCheckDefault" /><a>Large</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            
+
 
             <br><br>
         </div>
-        <!-- <div class="col-lg-8 m-auto text-center">
-            <h5>Tendencia</h5>
-        </div>
-        <app-carousel></app-carousel> -->
-
-    
-
 
         <section class="apple py-5">
             <div class="container text-white py-5">
                 <div class="row">
                     <div class="col-lg-6">
                         <h1 class="font-weight-bold py-3">¿Estas interesado en saber quiénes somos?</h1>
-                        
+
                         <a class="btn" href="">Conoce mas</a>
                     </div>
                 </div>

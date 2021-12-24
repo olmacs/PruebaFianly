@@ -10,9 +10,7 @@ export class LoginService {
 
   constructor(protected http: HttpService) { }
   
-  public auth(login: Login): Observable<any>{
-    console.log(environment.endpoint + '/users?email=' + login.email + "&password=" + login.password);
-    
+  public auth(login: Login): Observable<any>{  
     return this.http.doGet<any>(environment.endpoint + '/users?email=' + login.email + "&password=" + login.password, this.http.optsName('auth'))
   }
 }
