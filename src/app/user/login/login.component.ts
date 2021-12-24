@@ -24,13 +24,17 @@ export class LoginComponent implements OnInit {
       this.loginService.auth(this.loginForm.value).subscribe(
         async (value) => {
           
-          console.log(value);
-          localStorage.setItem('token', value['token']);
-          localStorage.setItem('username', value['Username']);
-          localStorage.setItem('id', value['id']);
-
-          //await this.router.navigate([".."]);
-          //window.location.reload();
+          if (value.length > 0){
+            localStorage.setItem('name', value[0]['name']);
+            localStorage.setItem('id', value[0]['id']);
+            await this.router.navigate([""]);
+            window.location.reload();
+          }
+          else
+          {
+            this.alertInvalid();
+          }
+          
         }, (error) => {
           console.log(error);
           

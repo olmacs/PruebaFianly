@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CatalogService } from './service/catalog.service'
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -7,38 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected catalogService : CatalogService) { }
   
 
-	cards =[
-		{
-			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-			"name": "CHECK PRINT SHIRT",
-			"price": 110
-		},
-		{
-			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-			"name": "GLORIA HIGH LOGO SNEAKER",
-			"price": 91
-		},
-		{
-			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-			"name": "CATE RIGID BAG",
-			"price": 94.5
-		},
-		{
-			"imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
-			"name": "GUESS CONNECT WATCH",
-			"price": 438.9
-		},
-		{
-			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-			"name": "'70s RETRO GLAM KEFIAH",
-			"price": 20
-		}
-	];
+	cards: any;
   products: any = [[]];
-
+  type: any;
+  size: any;
+  color: any;
 
   chunk(arr: any, chunkSize:any) {
     let R = [];
@@ -47,13 +23,43 @@ export class CatalogComponent implements OnInit {
     }
     return R;
   }
-
+  filterProducts(event: any, option: string){
+    switch(option){
+      case "0":
+        this.type = event.target.value;
+        break;
+      case "1":
+        this.color = event.target.value;
+        break;
+      case "2":
+        this.size = event.target.value;
+        break;
+    }
+    this.catalogService.filerProducts(this.type, this.color, this.size).subscribe(
+      value =>{
+        console.log(value);
+        this.cards = value;
+        this.products = this.chunk(this.cards, 4);
+      },
+      error =>{
+        console.log(error);
+        
+      } )
+  }
   ngOnInit(): void {
+    this.catalogService.filerProducts(this.type, this.color, this.size).subscribe(
+      value =>{
+        console.log(value);
+        this.cards = value;
+        this.products = this.chunk(this.cards, 4);
+        
+      },
+      error =>{
+        console.log(error);
+        
+      } )
     console.log(this.cards);
-    
-    this.products = this.chunk(this.cards, 4);
-    console.log(this.products);
-    
+
   }
 
 }

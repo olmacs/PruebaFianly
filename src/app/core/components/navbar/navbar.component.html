@@ -1,110 +1,49 @@
 <mdb-navbar SideClass="test navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" class="navCss">
 
-    <h1 class="navbar-brand " href="#">
-      <div class="logo">
-        
-        <h5>Logo</h5>
+  <h1 class="navbar-brand " href="#">
+    <div class="logo">
+      <div class="row">
+        <a href=""><img src="https://img.icons8.com/ios-glyphs/60/000000/shop.png"/></a>
       </div>
-    </h1>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav col-10">
-        <li class="nav-item">
-          <a class="nav-link active " aria-current="page" href="/home">Inicio</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link  dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Servicios
-          </a>
-          <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/gestorservicios">Mis servicios</a></li>
-            <li><a class="dropdown-item" href="#">Nuevos</a></li>
-            <li><a class="dropdown-item" href="#">Mas Buscados</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Categorias
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!-- <li><a class="dropdown-item" *ngFor="let categoria of categorias"
-                href="/filter-service?nombre=&categoria={{categoria.id}}">{{categoria.nombre}}</a></li> -->
-          </ul>
-        </li>
-  
-  
-        <!-- <form class="d-flex col-8 form-search" (ngSubmit)="filterByName($event)">
-          <input class="form-control me-2 search" type="search" placeholder="..." aria-label="Search" name="nameFilter"
-            [(ngModel)]="nameFilter">
-          <button class="btn_pro btn-outline-success" type="submit">
-            <i class="a">search</i>
-          </button>
-        </form> -->
-  
-      </ul>
-      <ul class="navbar-nav col-3 align-self-end">
-  
-        <form class="d-flex">
-  
-         <!--  <button class="btn btn-outline-success log" mat-button [matMenuTriggerFor]="aboveMenu">
-            <i class="a">person</i>
-  
-          </button> -->
-  
-          <!-- Click Menu Spawn :3 -->
-         <!-- <mat-menu #aboveMenu="matMenu" yPosition="above">
-            <button href="/viewprofile" mat-menu-item>
-              <a href="/gestorservicios" class="btn btn_black" type="submit">
-                Mis Servicios
-              </a>
-            </button>
-  
-             <button *ngIf="username != null" href="/viewprofile" mat-menu-item>
-              <a href="/viewprofile" class="btn btn_black" type="submit">
-                {{username}}
-              </a>
-            </button>
-  
-            <button href="/viewprofile" mat-menu-item>
-              <a  class="btn btn_black" type="submit">
-                {{log_sesion}}
-              </a>
-            </button>
-  
-            <button href="/viewprofile" mat-menu-item>
-              <a href="/chat">
-                <i class="a"> chat</i>
-              </a>
-            </button>
-  
-            
-        </mat-menu>
-    -->
-  
-  
-  
-  
-  
-          <!-- <ng-template *ngIf="sesionActiva == true;then logOutButton"></ng-template>
-  
-          <ng-template #logOutButton>
-            <a  class="btn btn-outline-success log" type="submit">
-              <i class="a">logout</i>
-            </a>
-          </ng-template> -->
-  
-  
-        </form>
-  
-      </ul>
-  
+      <div class="row text-center">
+        <a>Incio</a>
+      </div>
     </div>
-  </mdb-navbar>
+  </h1>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav col-10">
+
+    </ul>
+    <ul class="navbar-nav col-3 align-self-end">
+
+      <form class="d-flex">
+        <ng-template *ngIf="sesionActiva == false; then loginButton">
+
+        </ng-template>
+        <ng-template #loginButton>
+          <button (click)="goLogin()" class="btn">
+            <a>LOGIN</a>
+          </button>
+        </ng-template>
+
+
+
+        <ng-template *ngIf="sesionActiva == true;then logOutButton"></ng-template>
+
+        <ng-template #logOutButton>
+          <button (click)="logOut()" class="btn">
+            <a class="a">LOGOUT</a>
+          </button>
+        </ng-template>
+
+
+      </form>
+
+    </ul>
+
+  </div>
+</mdb-navbar>

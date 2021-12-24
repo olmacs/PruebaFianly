@@ -1,41 +1,110 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "c.sepulveda@utp.edu.co",
-      "username": "CamiloSepulveda",
-      "password": "12345"
-    },
-    {
-      "lastname": "sepulveda",
-      "email": "sepulveda@utp.edu.co",
-      "password": "12345",
-      "city": "Cartago",
-      "name": "camilo",
-      "id": 2
-    },
-    {
-      "lastname": "sepulveda",
-      "email": "sepulveda@utp.edu.co",
-      "password": "12345",
-      "city": "cartago",
-      "name": "camilo",
-      "id": 3
-    },
-    {
       "lastname": "Sepulveda",
-      "email": "sepulveda@utp.edu.co",
+      "email": "c.sepulveda@utp.edu.co",
       "password": "12345",
       "city": "Cartago",
-      "name": "Olmac",
-      "id": 4
+      "name": "Camilo",
+      "id": 1
     }
   ],
   "products": [
+		{
+			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+			"name": "CHECK PRINT SHIRT",
+      "color": "red",
+      "type": "shirt",
+      "size": "medium",
+			"price": 110
+		},
+		{
+			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+			"name": "GLORIA HIGH SNEAKER",
+      "color": "brown",
+      "type": "shoes",
+      "size": "medium",
+			"price": 91
+		},
+		{
+			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+			"name": "CATE RIGID BAG",
+      "color": "brown",
+      "type": "accessories",
+      "size": "petite",
+			"price": 94.5
+		},
+		{
+			"imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+			"name": "GUESS CONNECT WATCH",
+      "color": "black",
+      "type": "accessories",
+      "size": "petite",
+			"price": 438.9
+		},
+		{
+			"imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+			"name": "'70s RETRO GLAM KEFIAH",
+      "color": "red",
+      "type": "accessories",
+      "size": "large",
+			"price": 20
+		},
     {
-      "id": 1,
-      "name": "",
-      "description": ""
-    }
-  ]
+			"imgUrl": "https://m.media-amazon.com/images/I/51C8qOjRGJL._AC_UX385_.jpg",
+			"name": "CHECK PRINT SHIRT",
+      "color": "black",
+      "type": "shirt",
+      "size": "medium",
+			"price": 10
+		},
+		{
+			"imgUrl": "https://img.tatacliq.com/images/i4/437Wx649H/MP000000004818385_437Wx649H_20190522152312.jpeg",
+			"name": "CAMPUS SHOES",
+      "color": "black",
+      "type": "shoes",
+      "size": "medium",
+			"price": 91
+		},
+		{
+			"imgUrl": "https://i.pinimg.com/236x/95/29/f5/9529f51209f6f3e1cef20593a20afbd5.jpg",
+			"name": " DIOR BAG",
+      "color": "red",
+      "type": "accessories",
+      "size": "petite",
+			"price": 300
+		},
+		{
+			"imgUrl": "https://statics.venca.com/web/img/products/MKP000037530_10049428_PL_20201005175237_0_l.jpg",
+			"name": "SMARTWATCH",
+      "color": "black",
+      "type": "accessories",
+      "size": "medium",
+			"price": 100.9
+		},
+		{
+			"imgUrl": "https://http2.mlstatic.com/D_NQ_NP_919187-MLC42360757433_062020-O.jpg",
+			"name": "'GLAM KEFIAH",
+      "color": "brown",
+      "type": "accessories",
+      "size": "medium",
+			"price": 30
+		},
+    {
+			"imgUrl": "https://m.media-amazon.com/images/I/71ipdmCB6CL._UY625_.jpg",
+			"name": "SPORT SHOES",
+      "color": "black",
+      "type": "shoes",
+      "size": "medium",
+			"price": 55
+		},
+		{
+			"imgUrl": "https://cdn-images.farfetch-contents.com/16/51/46/47/16514647_32631244_300.jpg",
+			"name": "CATE RIGID BAG",
+      "color": "black",
+      "type": "accessories",
+      "size": "medium",
+			"price": 94.5
+		}
+	]
 }
